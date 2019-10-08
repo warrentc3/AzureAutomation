@@ -35,7 +35,7 @@ function Update-WVDAccess {
         HelpMessage="Designate if AzureAD Domain Services is in use")]
         [Parameter(Mandatory=$true,ParameterSetName="AADDS",
         HelpMessage="Designate if AzureAD Domain Services is in use")]
-        [bool]
+        [switch]
         $UseAADDS,
         [Parameter(Mandatory=$true,ParameterSetName="AADDS",
         HelpMessage="AzureAD Object ID of Security Group used to synchronize with AzureAD Domain Services")]
