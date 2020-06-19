@@ -1,5 +1,5 @@
 Write-Output "Getting Graph API Token"
-$creds = Get-AutomationPSCredential -Name 'GraphAPI-Infrastructure'
+$creds = Get-AutomationPSCredential -Name 'GraphAPI'
 # Define the values applicable for the application used to connect to the Graph (change these for your tenant)
 $AppId = $creds.UserName
 $TenantId = "000000000000000000"
