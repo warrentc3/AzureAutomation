@@ -1,6 +1,8 @@
+$ADGroupName = "GROUPNAME"
+
 $ADSystemInfo = New-Object -ComObject "ADSystemInfo"
 $NetBIOSDomain = $ADSystemInfo.GetType().InvokeMember("DomainShortName", "GetProperty", $null, $ADSystemInfo, $null)
-$Identity = $NetBIOSDomain + "\KTB-SystemMonitoring-ADS-GLBL_ServiceAccounts"
+$Identity = $NetBIOSDomain + "\" + $ADGroupName
 $ID = New-Object System.Security.Principal.NTAccount($Identity)
 $SID= $ID.Translate( [System.Security.Principal.SecurityIdentifier] ).toString()
 [string]$ComputerName = $env:Computername
